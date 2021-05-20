@@ -1,5 +1,4 @@
-﻿using ApiLibrary;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,22 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Notes.WPF.frontend
+namespace Notes.WPF.frontend.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AddNote.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddNote : UserControl
     {
-        public MainWindow()
+        public AddNote()
         {
             InitializeComponent();
-            ApiHelper.InitializeClient();
-        }
-
-        private void GetNotes_Click(object sender, RoutedEventArgs e)
-        {
-            
         }
     }
 }

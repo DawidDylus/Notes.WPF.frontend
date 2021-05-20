@@ -14,22 +14,28 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Notes.WPF.frontend
+namespace Notes.WPF.frontend.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for IndexView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class IndexView : UserControl
     {
-        public MainWindow()
+
+        public IndexView()
         {
             InitializeComponent();
-            ApiHelper.InitializeClient();
         }
 
-        private void GetNotes_Click(object sender, RoutedEventArgs e)
+        private async Task GetNotes()
         {
-            
+            var notes = await NotesProcessor.LoadNotes();
+
+        }
+
+        private async void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+          await GetNotes();
         }
     }
 }

@@ -8,10 +8,16 @@
 
   <ItemGroup>
     <Folder Include="MVVM\Model\" />
-    <Folder Include="MVVM\ModelView\" />
-    <Folder Include="MVVM\View\" />
     <Folder Include="Images\" />
     <Folder Include="Fonts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Caliburn.Micro.Core" Version="4.0.173" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ApiLibrary\ApiLibrary.csproj" />
   </ItemGroup>
 
 </Project>
